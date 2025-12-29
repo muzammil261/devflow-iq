@@ -1,0 +1,94 @@
+:root {
+  --bg: #0b0b12;
+  --violet: #a855f7;
+  --text-main: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg);
+  font-family: "Segoe UI", sans-serif;
+  color: var(--text-main);
+}
+
+/* CARD */
+.RegisterPageBox {
+  width: 600px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  background: linear-gradient(145deg, #161625, #0c0c14);
+  border-radius: 20px;
+  box-shadow: 0 0 130px rgba(168, 85, 247, 0.25);
+  text-align: center;
+}
+
+/* TITLE */
+.rp {
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--violet);
+}
+
+/* INPUT / SELECT GROUP */
+.input-group {
+  display: flex;
+  align-items: center;
+  border-bottom: 2.5px solid #aaa;
+  padding: 8px 4px;
+}
+
+.input-group input,
+.input-group select {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+  padding: 4px;
+}
+
+/* SELECT ARROW COLOR FIX */
+.input-group select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+/* FOCUS EFFECT */
+.input-group:focus-within {
+  border-bottom: 4px solid var(--violet);
+}
+
+/* BUTTON */
+#submit {
+  margin-top: 30px;
+  padding: 14px;
+  border: none;
+  border-radius: 30px;
+  background: var(--violet);
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#submit:hover {
+  box-shadow: 0 0 35px var(--violet);
+}

@@ -1,0 +1,372 @@
+:root {
+  --bg: #0b0b12;
+  --glass: rgba(255, 255, 255, 0.08);
+  --violet: #a855f7;
+  --violet-soft: rgba(168, 85, 247, 0.4);
+  --text-main: #ffffff;
+  --text-muted: #b8b8c7;
+  --danger: crimson;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #1a0f2e, var(--bg));
+  color: var(--text-main);
+}
+
+/* ================= LAYOUT ================= */
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+  width: 280px;
+  background: rgba(10, 10, 20, 0.75);
+  backdrop-filter: blur(18px);
+  border-right: 1px solid var(--glass);
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  text-align: center;
+  color: var(--violet);
+  font-weight: 800;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+/* ================= PROFILE ================= */
+.profile {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.profileImg {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+  border: 2px solid var(--violet);
+  box-shadow: 0 0 25px var(--violet-soft);
+  cursor: pointer;
+}
+
+.profile p {
+  margin-top: 12px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+/* ================= PROFILE BUTTONS ================= */
+.profile-buttons {
+  margin-top: 12px;
+  display: flex;
+  align-items: center; /* vertically center items */
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Make label behave exactly like a button */
+.profile-buttons .edit-btn {
+  display: inline-flex; /* ensures it aligns properly with other flex items */
+  align-items: center;
+  justify-content: center;
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: 1px solid var(--violet);
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  backdrop-filter: blur(12px);
+  background: rgba(168, 85, 247, 0.2);
+  color: var(--violet);
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.3);
+  margin-top: 17px;
+}
+
+.profile-buttons .edit-btn:hover {
+  background: rgba(168, 85, 247, 0.4);
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.6);
+  color: #fff;
+}
+
+/* Remove button */
+.profile-buttons .remove-btn {
+  display: inline-flex; /* ensures proper alignment */
+  align-items: center;
+  justify-content: center;
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: 1px solid var(--danger);
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 0, 80, 0.15);
+  color: #ff0050;
+  box-shadow: 0 0 15px rgba(255, 0, 80, 0.3);
+}
+
+.profile-buttons .remove-btn:hover {
+  background: rgba(255, 0, 80, 0.35);
+  box-shadow: 0 0 25px rgba(255, 0, 80, 0.6);
+  color: #fff;
+}
+
+
+/* ================= SEARCH BAR ================= */
+.search {
+  width: 100%;
+  padding: 14px 22px;
+  border-radius: 20px; /* match buttons */
+  border: 1px solid var(--violet); /* same as Remove button */
+  background: rgba(255, 255, 255, 0.05); /* soft glass effect */
+  color: var(--text-main);
+  outline: none;
+  margin-bottom: 30px;
+  font-size: 15px;
+  transition: 0.3s ease;
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.6); /* same as button shadow */
+}
+
+.search::placeholder {
+  color: var(--text-muted);
+}
+
+.search:hover,
+.search:focus {
+  border-color: var(--violet);
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.6);
+  background: rgba(168, 85, 247, 0.2);
+  color: #fff;
+}
+
+/* ================= MENU ================= */
+.sidebar ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.sidebar li {
+  padding: 14px;
+  margin-bottom: 14px;
+  border-radius: 999px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.sidebar li:hover {
+  background: var(--glass);
+  box-shadow: 0 0 18px var(--violet-soft);
+}
+
+.logout {
+  border: 1px solid crimson;
+  color: crimson;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logout:hover {
+  background: crimson;
+  color: crimson;
+  background: rgba(255, 0, 80, 0.35);
+  box-shadow: 0 0 25px rgba(255, 0, 80, 0.6);
+}
+
+/* ================= MAIN ================= */
+.main-content {
+  flex: 1;
+  padding: 40px;
+}
+
+/* ================= DASHBOARD ================= */
+.dashboard-top {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+/* ================= CARDS ================= */
+.chart-card,
+.info-card {
+  flex: 1;
+  min-width: 320px;
+  background: linear-gradient(145deg, #161625, #0c0c14);
+  border-radius: 22px;
+  padding: 30px;
+  box-shadow: 0 0 45px rgba(168, 85, 247, 0.25);
+}
+
+.info-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: var(--violet);
+}
+
+.info-card p {
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .dashboard-top {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 220px;
+  }
+}
+
+@media (max-width: 650px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+}
+
+/* =========================
+   ASSIGN PROJECT FORM
+========================= */
+.assign-form {
+  max-width: 520px;
+  background: #020617;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.assign-form h2 {
+  margin-bottom: 20px;
+  color: #a855f7;
+  text-align: center;
+}
+
+.assign-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.assign-form input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #0f172a;
+  color: white;
+}
+
+.assign-form button {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background: #a855f7;
+  color: white;
+  cursor: pointer;
+}
+
+/* =========================
+   PROJECT TABLES
+========================= */
+.project-tables h2 {
+  margin: 20px 0 10px;
+  color: #a855f7;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  background: #020617;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+}
+
+thead {
+  background: #1e293b;
+}
+
+tbody tr {
+  border-bottom: 1px solid #1e293b;
+}
+
+tbody tr:hover {
+  background: #0f172a;
+}
+
+/*SETTINGS */
+
+.settings {
+  max-width: 520px;
+  background: linear-gradient(145deg, #161625, #0c0c14);
+  padding: 30px;
+  border-radius: 24px;
+  box-shadow: 0 0 45px rgba(168, 85, 247, 0.25);
+  margin-bottom: 30px;
+}
+
+.settings h2 {
+  margin-bottom: 20px;
+  color: var(--violet);
+}
+
+.settings input {
+  width: 100%;
+  margin-bottom: 14px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: var(--glass);
+  border: 1px solid transparent;
+  color: var(--text-main);
+}
+
+.settings input:focus {
+  border-color: var(--violet);
+  box-shadow: 0 0 18px var(--violet-soft);
+  outline: none;
+}
+
+.settings button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 999px;
+  border: none;
+  background: var(--violet);
+  color: #000;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.settings button:hover {
+  background: #6a3df0;
+}

@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": "4eed",
+      "name": "Shaik Mohammed Muzammil",
+      "email": "muzammilshaik624@gmail.com",
+      "password": "Aa9@",
+      "role": "developer"
+    },
+    {
+      "id": "ab72",
+      "name": "shaik mohammed muzammil",
+      "email": "mohammed890@gmail.com",
+      "password": "Aa9@",
+      "role": "manager"
+    },
+    {
+      "id": "29e8",
+      "name": "mohammed",
+      "email": "shaikmohammed098@gmail.com",
+      "password": "Aa9@",
+      "role": "admin"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+/* Card style matching homepage theme */
+.data-card {
+  width: 320px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: linear-gradient(145deg, #161625, #0c0c14);
+  border-radius: 20px;
+  box-shadow: 0 0 80px rgba(168, 85, 247, 0.25);
+  color: var(--text-main);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.data-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 120px rgba(168, 85, 247, 0.4);
+}
+
+/* Individual tech node inside card */
+.tech-node {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tech-name {
+  font-weight: 600;
+  color: var(--text-main);
+  font-size: 16px;
+}
+
+.tech-line-container {
+  width: 100%;
+  height: 18px;
+  background: rgba(255, 255, 255, 0.08); /* glassy effect */
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.tech-line {
+  height: 100%;
+  background: var(--violet);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8px;
+  color: #000;
+  font-weight: bold;
+  border-radius: 12px 0 0 12px;
+  width: 0;
+  animation: grow 1s forwards;
+  box-shadow: 0 0 15px var(--violet);
+}
+
+.tech-percent {
+  font-size: 13px;
+  font-weight: 600;
+  color: #000;
+}
+
+/* Animate line growth */
+@keyframes grow {
+  from { width: 0; }
+  to { width: inherit; }
+}
+
+/* Back button styling */
+.back-home-btn {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 14px 28px;
+  background: var(--violet);
+  color: #000;
+  font-size: 16px;
+  border-radius: 999px;
+  border: 2px solid var(--violet);
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.4);
+}
+
+.back-home-btn:hover {
+  background: rgba(168, 85, 247, 0.4);
+  box-shadow: 0 0 35px rgba(168, 85, 247, 0.4);
+}
+.card-category {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--violet);
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--violet);
+  padding-bottom: 8px;
+}

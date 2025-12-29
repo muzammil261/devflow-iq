@@ -1,0 +1,116 @@
+.video-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .video-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+h1 {
+  text-decoration: 5px underline var(--violet);
+}
+
+.video-upload-box {
+  flex: 1;
+  padding: 40px;
+  border: 2px dashed var(--violet); /* Violet border */
+  border-radius: 20px;
+  text-align: center;
+  background: rgba(79, 70, 229, 0.08);
+  transition: all 0.3s ease;
+}
+
+.video-upload-box:hover {
+  background: rgba(79, 70, 229, 0.12);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(79, 70, 229, 0.4); /* Violet shadow */
+}
+
+.video-upload-box h2 {
+  margin-bottom: 25px;
+  color: var(--violet);
+}
+
+.upload-input {
+  display: none;
+}
+
+.upload-btn {
+  display: inline-block;
+  padding: 16px 28px;
+  background: var(--violet); /* Violet background */
+  color: white;
+  font-size: 16px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid var(--violet); /* Violet border */
+}
+
+.upload-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(79, 70, 229, 0.4); /* Violet shadow */
+}
+
+.video-preview-box {
+  flex: 1;
+  padding: 25px;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 14px 30px rgba(79, 70, 229, 0.15); /* Violet shadow */
+  text-align: center;
+  border: 2px solid var(--violet); /* Violet border */
+}
+
+.video-preview-box video {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.15); /* Violet shadow */
+}
+
+.remove-btn {
+  margin-top: 18px;
+  padding: 12px 24px;
+  border: 2px solid var(--violet); /* Violet border */
+  background: var(--violet); /* Violet background */
+  color: white;
+  font-size: 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.remove-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 18px rgba(79, 70, 229, 0.4); /* Violet shadow */
+}
+
+
+.back-home-btn {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 14px 28px;
+  background: var(--violet);
+  color: white;
+  font-size: 16px;
+  border-radius: 14px;
+  border: 2px solid var(--violet);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.back-home-btn:hover {
+  background: rgba(168, 85, 247, 0.4); /* matches theme hover */
+  box-shadow: 0 10px 20px rgba(168, 85, 247, 0.4);
+  transform: translateY(-2px);
+}
